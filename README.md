@@ -6,28 +6,15 @@ This project is designed to demonstrate API test automation using Python, `httpx
 
 - [Python](https://www.python.org/downloads/) (version 3.12+)
 - [Poetry](https://python-poetry.org/docs/#installation) (for dependency management)
-- [Make](https://www.gnu.org/software/make/) (for running tasks)
 
 ## Setup
 
-1. **Clone the repository:**
+**Clone the repository:**
 
-    ```bash
-    git clone https://github.com/yourusername/your-repo.git
-    cd your-repo
-    ```
-
-2. **Install dependencies using `poetry`:**
-
-    ```bash
-    poetry install
-    ```
-
-3. **Create a lock file with `poetry`:**
-
-    ```bash
-    poetry lock
-    ```
+```bash
+git clone https://github.com/jsmolar/moxymind-task.git
+cd moxymind-task
+```
 
 ## Running Tests
 
@@ -36,11 +23,11 @@ This project is designed to demonstrate API test automation using Python, `httpx
 To run all tests in the `testsuite/` folder:
 
 ```bash
-make test
+poetry run pytest
 ```
 
 ### Run tests with external data source (command line arguments)
 
 ```bash
-make test ARGS="--username='{user_name}' --userjob='{user_job}'"
+poetry run pytest --username='{}' --userjob='{}'
 ```
